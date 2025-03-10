@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Express - Restaurant Ordering System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Gourmet Express</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Order Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 mb-4">Welcome to Gourmet Express</h1>
+                    <p class="lead mb-4">Experience the finest dining delivered right to your doorstep</p>
+                    <hr class="my-4">
+                    
+                    <div class="about-section mb-5">
+                        <h2 class="h3 mb-3">About Our Restaurant</h2>
+                        <p>At Gourmet Express, we believe that exceptional food should be accessible to everyone, anywhere. Founded in 2023, our restaurant has been committed to delivering restaurant-quality meals directly to your home, ensuring that every bite is as perfect as if you were dining in a fine establishment.</p>
+                        
+                        <p>Our expert chefs carefully prepare each dish using the freshest ingredients sourced from local suppliers. We take pride in our diverse menu that caters to various tastes and dietary preferences, from classic comfort foods to innovative culinary creations.</p>
+                    </div>
+
+                    <div class="features-section mb-5">
+                        <h2 class="h3 mb-3">Why Choose Us?</h2>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="feature-card p-3 bg-light rounded">
+                                    <i class="bi bi-clock fs-3"></i>
+                                    <h3 class="h5 mt-3">Quick Delivery</h3>
+                                    <p>Fresh food delivered within 30 minutes of ordering</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card p-3 bg-light rounded">
+                                    <i class="bi bi-heart fs-3"></i>
+                                    <h3 class="h5 mt-3">Quality First</h3>
+                                    <p>Premium ingredients and expert preparation</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card p-3 bg-light rounded">
+                                    <i class="bi bi-shield-check fs-3"></i>
+                                    <h3 class="h5 mt-3">Safe & Hygienic</h3>
+                                    <p>Strict adherence to food safety standards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#order" class="btn btn-primary btn-lg">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Place Your Order</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Menu Selection Section -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title h4 mb-4">Select Your Meal</h2>
+                            <div class="mb-4">
+                                <label for="mainDish" class="form-label">Main Dish</label>
+                                <select id="mainDish" name="mainDish" class="form-select form-select-lg" required></select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="sideDish" class="form-label">Side Dish</label>
+                                <select id="sideDish" name="sideDish" class="form-select form-select-lg" required></select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="dessert" class="form-label">Dessert</label>
+                                <select id="dessert" name="dessert" class="form-select form-select-lg" required></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <!-- Checkout Form Section -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title h4 mb-4">Checkout</h2>
+                            <form id="checkoutForm">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" 
+                                           placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone" 
+                                           placeholder="(123) 456-7890" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="address" class="form-label">Delivery Address</label>
+                                    <textarea class="form-control form-control-lg" id="address" rows="3" 
+                                              placeholder="Enter your full delivery address" required></textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <h3 class="h5 mb-3">Order Summary</h3>
+                                    <div id="orderSummary" class="p-4 bg-light rounded"></div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100">Place Order</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@gourmetexpress.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">About Us</a></li>
+                        <li><a href="#" class="text-light">Menu</a></li>
+                        <li><a href="#" class="text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 Gourmet Express. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modernizr with required feature detections -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="scripts/modules/Model.js" type="module"></script>
+    <script src="scripts/modules/View.js" type="module"></script>
+    <script src="scripts/modules/Controller.js" type="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+</body>
+</html> 
